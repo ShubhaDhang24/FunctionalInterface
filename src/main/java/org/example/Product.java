@@ -17,16 +17,15 @@ public class Product {
     private int price;
 
 
-
     //getters and setters
     public String getProductName() {
         return productName;
     }
 
-    public Product(String productName,int price,int stock) {
+    public Product(String productName, int price, int stock) {
         this.productName = productName;
-        this.price=price;
-        this.stock=stock;
+        this.price = price;
+        this.stock = stock;
     }
 
     public void setProductName(String productName) {
@@ -57,19 +56,17 @@ public class Product {
                 ", price=" + price +
                 '}';
     }
-    public static void applyConditionalAndAction(List<Product> productList, Conditional conditional,Action action)
-    {
-        for (Product p:productList) {
-            if(conditional.test(p)){
+    //Method
+    public static void applyConditionalAndAction(List<Product> productList, Conditional conditional, Action action) {
+        for (Product p : productList) {
+            if (conditional.test(p)) {
                 action.execute(p);
             }
 
         }
-    };
+    }
 
-
-
-
+    ;
 
 
 }
